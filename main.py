@@ -22,6 +22,7 @@ bryan_nilsen = Instructor("Bryan", "Nilsen", "@bnilsen", cohort_two, "high-fives
 andy_collins = Instructor("Andy", "Collins", "@andycollins", cohort_two, "sarcasm")
 kristen_norris = Instructor("Kristen", "Norris", "@knorris", cohort_two, "correction other instructors' errors")
 jisie_david = Instructor("Jisie", "David", "@jisiedavid", cohort_two, "spreading the positive attitude")
+chase_fite = Instructor("Chase", "Fite", "@chasefite", cohort_two, "helping out students")
 
 bryan_nilsen.assignExercise(exercise_one, student_one)
 bryan_nilsen.assignExercise(exercise_four, student_one)
