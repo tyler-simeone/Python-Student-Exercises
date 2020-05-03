@@ -11,6 +11,13 @@ class Student():
     def __repr__(self):
         return f'{self.first_name} {self.last_name} is in {self.cohort}'
 
+class Cohort():
+    def __init__(self, name):
+        self.cohortName = name
+
+    # def __repr__(self):
+    #     return f'{self.first_name} {self.last_name} is in {self.cohort}'
+
 class StudentExerciseReports():
 
     """Methods for reports on the Student Exercises database"""
