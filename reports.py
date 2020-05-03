@@ -8,6 +8,9 @@ class Student():
         self.slack_handle = handle
         self.cohort = cohort
 
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name} is in {self.cohort}'
+
 class StudentExerciseReports():
 
     """Methods for reports on the Student Exercises database"""
@@ -22,8 +25,8 @@ class StudentExerciseReports():
         with sqlite3.connect(self.db_path) as conn:
             
             # Had to put this line above db_cursor to get it to work.
-            # Returns a student obj from Student class for each row of data returned, 
-            # with specified index positions.
+            # Returns a student obj from Student class for each row of data returned
+            # from fetchall(), with specified index positions.
             conn.row_factory = lambda cursor, row: Student(
                 row[1], row[2], row[3], row[5]
             )
@@ -46,7 +49,10 @@ class StudentExerciseReports():
             all_students = db_cursor.fetchall()
 
             for student in all_students:
-                print(f"{student.first_name} {student.last_name} is in {student.cohort}")
+                print(student)
+
+            # Same as above but in list comprehension format
+            # [print(s) for s in all_students]
 
 reports = StudentExerciseReports()
 reports.all_students()
